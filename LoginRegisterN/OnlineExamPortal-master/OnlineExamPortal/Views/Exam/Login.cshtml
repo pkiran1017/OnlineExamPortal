@@ -1,0 +1,54 @@
+﻿@model OnlineExamPortal.Models.Registration
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/Login_Registration.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="title">
+                Login
+            </div>
+            <form asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group field">
+                    
+                    <input asp-for="Email" class="form-control" placeholder="Username"/>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group field">
+                   
+                    <input asp-for="Password" class="form-control" placeholder="Password"/>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="content">
+                    <div class="pass-link">
+                        <a asp-action="ForgetPass"> Forgot Password </a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="pass-link">
+                        <a asp-action="Registration"> Register Here! </a>
+                    </div>
+                </div>
+                <div class="form-group field">
+                    <input type="submit" value="Login" />
+                </div>
+            </form>
+
+
+            
+        </div>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>

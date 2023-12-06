@@ -1,0 +1,62 @@
+﻿@model OnlineExamPortal.Models.Registration
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="~/css/Login_Registration.css">
+</head>
+
+<body>
+   <div class="container">
+    <div class="wrapper">
+        <div class="title">
+            Registration
+        </div>
+        <form asp-action="Registration">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group field">
+                
+                <input asp-for="UserId" class="form-control" placeholder="Enter User ID"/>
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group field">
+                
+                <input asp-for="UserName" class="form-control" placeholder="Enter Username"/>
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group field">
+               
+                <input asp-for="Password" class="form-control" placeholder="Enter Password"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group field">
+                
+                <input asp-for="Email" class="form-control" placeholder="Enter Email Id"/>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group field">
+
+                    <input asp-for="Mobile" class="form-control" placeholder="Enter Mobile Number" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>
+            </div>
+            <div class="form-group field">
+                
+                <input asp-for="UserRole" class="form-control" placeholder="Enter User Role"/>
+                <span asp-validation-for="UserRole" class="text-danger"></span>
+            </div>
+            <div class="form-group field">
+                <input type="submit" value="Register"  />
+            </div>
+                <div class="signup-link">
+                    Already have an account? <a asp-action="Login">Login here </a>
+                </div>
+        </form>
+        </div>
+    </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

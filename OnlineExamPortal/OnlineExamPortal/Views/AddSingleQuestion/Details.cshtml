@@ -1,0 +1,120 @@
+﻿@model OnlineExamPortal.Models.Question
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <style>
+        .title-hea h1 {
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 1.5em;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+            .title-hea h1:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 5px;
+                width: 55px;
+                background-color: #111;
+            }
+
+            .title-hea h1:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 2px;
+                height: 1px;
+                width: 95%;
+                max-width: 255px;
+                background-color: #333;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="title-hea">
+        <h1>Question Details</h1>
+    </div>
+
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Question1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Question1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Option1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Option1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Option2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Option2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Option3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Option3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Option4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Option4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Option5)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Option5)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CorrectOption)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CorrectOption)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DifficultyLevel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DifficultyLevel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Topic)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Topic.TopicId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.QuestionId">Edit</a> |
+    <a asp-action="Index">Back to Dashboard</a>
+</div>
+</body>
+
+</html>
