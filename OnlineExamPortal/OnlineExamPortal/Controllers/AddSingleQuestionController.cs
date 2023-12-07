@@ -172,6 +172,10 @@ namespace OnlineExamPortal.Controllers
         {
             return RedirectToAction("Index", "Users");
         }
+        public IActionResult Exampage()
+        {
+            return RedirectToAction("start", "quiz");
+        }
         public IActionResult drplist()
         {
             return View();
