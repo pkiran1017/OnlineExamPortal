@@ -1,0 +1,128 @@
+﻿@model OnlineExamPortal1.Models.Exam
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dddfeb;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: #1f2847;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background: #fff;
+  color: #1f2847;
+  font-size: 14px;
+}
+.start-screen .btn {
+  margin-top: 50px;
+}
+.hide {
+  display: none;
+}
+
+.btn {
+  width: 100%;
+  height: 60px;
+  background: #0c80ef;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.btn:hover {
+  background: #0a6bc5;
+}
+
+.btn.next {
+  display: none;
+}
+
+
+}
+</style>
+
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-screen">
+ <form  action="QuizPage">
+        <h1 class="heading">Quiz App</h1>
+        <div class="settings">
+          
+          <label for="category">Select Category:</label>
+
+              @Html.DropDownList("TopicList", @ViewBag.TopicList as List<SelectListItem>, "Select Topic", new { @class = "form-control", @id="category"})   
+              <label for="difficulty">Select difficulty:</label>
+          <select id="difficulty" name="difficulty">
+            <option value="">any difficulty</option>
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+          </select>
+          
+        </div>
+         
+        <button  type="submit" class="btn start">Start Quiz</button>
+        </form>
+      </div>
+ </div>
+
+</body>
+</html>

@@ -120,7 +120,7 @@ form .pass-link .separator {
     margin: 0 10px;
 }
 form .content .pass-link {
-    flex-grow: 2; 
+    flex-grow: 1; 
     text-align: center;
     
 }

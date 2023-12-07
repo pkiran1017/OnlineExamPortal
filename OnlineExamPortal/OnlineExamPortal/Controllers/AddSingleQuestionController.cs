@@ -17,7 +17,6 @@ namespace OnlineExamPortal.Controllers
         {
             _context = context;
         }
-
         // GET: AddSingleQuestion
         public async Task<IActionResult> Index(int? selectedTopic)
         {
@@ -35,7 +34,6 @@ namespace OnlineExamPortal.Controllers
 
             return View(questions);
         }
-
         // GET: AddSingleQuestion/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -43,7 +41,6 @@ namespace OnlineExamPortal.Controllers
             {
                 return NotFound();
             }
-
             var question = await _context.Questions
                 .Include(q => q.Topic)
                 .FirstOrDefaultAsync(m => m.QuestionId == id);
@@ -54,7 +51,6 @@ namespace OnlineExamPortal.Controllers
 
             return View(question);
         }
-
         // GET: AddSingleQuestion/Create
         public IActionResult Create()
         {
@@ -62,7 +58,6 @@ namespace OnlineExamPortal.Controllers
             ViewData["TopicId"] = new SelectList(_context.Topics, "TopicId", "TopicName");
             return View();
         }
-
         // POST: AddSingleQuestion/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -75,12 +70,10 @@ namespace OnlineExamPortal.Controllers
                 _context.Add(question);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
-            
+            }           
             ViewData["TopicId"] = new SelectList(_context.Topics, "TopicId", "TopicId", question.TopicId);
             return View(question);
         }
-
         // GET: AddSingleQuestion/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -88,7 +81,6 @@ namespace OnlineExamPortal.Controllers
             {
                 return NotFound();
             }
-
             var question = await _context.Questions.FindAsync(id);
             if (question == null)
             {
@@ -133,7 +125,6 @@ namespace OnlineExamPortal.Controllers
             ViewData["TopicId"] = new SelectList(_context.Topics, "TopicId", "TopicId", question.TopicId);
             return View(question);
         }
-
         // GET: AddSingleQuestion/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -152,7 +143,6 @@ namespace OnlineExamPortal.Controllers
 
             return View(question);
         }
-
         // POST: AddSingleQuestion/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -166,22 +156,22 @@ namespace OnlineExamPortal.Controllers
             if (question != null)
             {
                 _context.Questions.Remove(question);
-            }
-            
+            }         
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
         private bool QuestionExists(int id)
         {
           return (_context.Questions?.Any(e => e.QuestionId == id)).GetValueOrDefault();
         }
-
        public IActionResult AddBulkQuestions()
         {
             return RedirectToAction("Index", "DataUpload2");
         }
-
+        public IActionResult ManageUsers()
+        {
+            return RedirectToAction("Index", "Users");
+        }
         public IActionResult drplist()
         {
             return View();

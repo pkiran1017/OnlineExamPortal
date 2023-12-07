@@ -136,6 +136,9 @@
             @Html.DropDownList("selectedTopic", new SelectList(ViewBag.Topics, "TopicId", "TopicName"), "All Questions")
         </div>
         <button type="submit" class="add-question">Filter</button>
+        <div class="add-question">
+            <a asp-action="ManageUsers" class="add-question">Manage Users</a>
+        </div>
     </form>
 
 <table class="table">

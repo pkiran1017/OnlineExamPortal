@@ -102,7 +102,7 @@ namespace OnlineExamPortal.Controllers
                         
                         HttpContext.Session.SetInt32("UserId", userid_user);
 
-                        return RedirectToAction("UserPage");
+                        return RedirectToAction("start","quiz");
                     }
                 }
             }
