@@ -45,9 +45,23 @@ namespace OnlineExamPortal1.Controllers
         public IActionResult QuizPage(string TopicList,string difficulty)
         {
 
-            // db.Questions.Where(d => d.TopicId==Convert.ToInt32(TopicList) && d.DifficultyLevel==difficulty).ToList();
+            int? userId = HttpContext.Session.GetInt32("UserId");
+
+            // Fetch the username directly from the Users table
+            string query = "SELECT UserName FROM Users WHERE UserId = @UserId";
+
+            using (SqlCommand cmd = new SqlCommand(query, conn1))
+            {
+                cmd.Parameters.AddWithValue("@UserId", userId);
+                conn1.Open();
+                string username = cmd.ExecuteScalar()?.ToString();
+                conn1.Close();
+
+                ViewBag.UserId = userId;
+                ViewBag.Username = username;
+            }
+
             TempData["topic"] = TopicList;
-            //return View(db.Questions.ToList());
             return View(db.Questions.Where(d => d.TopicId == Convert.ToInt32(TopicList) && d.DifficultyLevel == difficulty).Take(10).ToList());
         }
 
@@ -96,9 +110,7 @@ namespace OnlineExamPortal1.Controllers
 
 
             }
-           
-
-            return Content("result");
+            return RedirectToAction("PieChart", "Result");
 
         }
     }

@@ -9,115 +9,127 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OnlineExamPortal
 build_property.RootNamespace = OnlineExamPortal
-build_property.ProjectDir = D:\VWITS Trainning Dta\Project\Moduls\AddQsModule\OnlineExamPortal\OnlineExamPortal\
+build_property.ProjectDir = D:\VWITS Trainning Dta\Project\Moduls\OnlineExamPortal\OnlineExamPortal\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\VWITS Trainning Dta\Project\Moduls\AddQsModule\OnlineExamPortal\OnlineExamPortal
+build_property.MSBuildProjectDirectory = D:\VWITS Trainning Dta\Project\Moduls\OnlineExamPortal\OnlineExamPortal
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Create.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkU2luZ2xlUXVlc3Rpb25cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Delete.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkU2luZ2xlUXVlc3Rpb25cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Details.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkU2luZ2xlUXVlc3Rpb25cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Edit.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkU2luZ2xlUXVlc3Rpb25cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Index.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/AddSingleQuestion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkU2luZ2xlUXVlc3Rpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/DataUpload2/Index.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/DataUpload2/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVVwbG9hZDJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Exam/AdminPage.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Exam/AdminPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxBZG1pblBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Exam/ForgetPass.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Exam/ForgetPass.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxGb3JnZXRQYXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Exam/ForgetPassView.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Exam/ForgetPassView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxGb3JnZXRQYXNzVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Exam/Login.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Exam/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Exam/Registration.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Exam/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Exam/UserPage.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Exam/UserPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbVxVc2VyUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Home/Index.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Home/Privacy.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/quiz/QuizPage.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/quiz/QuizPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccXVpelxRdWl6UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/quiz/start.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/quiz/start.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NccXVpelxzdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Shared/Error.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Result/ByTopics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0XEJ5VG9waWNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Result/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Result/PieChart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0XFBpZUNoYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Users/Create.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Users/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Users/Delete.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Users/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Users/Details.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Users/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Users/Edit.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Users/Index.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/_ViewImports.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/_ViewStart.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/VWITS Trainning Dta/Project/Moduls/AddQsModule/OnlineExamPortal/OnlineExamPortal/Views/Shared/_Layout.cshtml]
+[D:/VWITS Trainning Dta/Project/Moduls/OnlineExamPortal/OnlineExamPortal/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9gsi6ox00u

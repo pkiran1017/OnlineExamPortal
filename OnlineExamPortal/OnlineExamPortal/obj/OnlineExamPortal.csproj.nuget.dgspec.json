@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VWITS Trainning Dta\\Project\\Moduls\\AddQsModule\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj": {}
+    "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj": {}
   },
   "projects": {
-    "D:\\VWITS Trainning Dta\\Project\\Moduls\\AddQsModule\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj": {
+    "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VWITS Trainning Dta\\Project\\Moduls\\AddQsModule\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj",
+        "projectUniqueName": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj",
         "projectName": "OnlineExamPortal",
-        "projectPath": "D:\\VWITS Trainning Dta\\Project\\Moduls\\AddQsModule\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj",
+        "projectPath": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj",
         "packagesPath": "C:\\Users\\p1432\\.nuget\\packages\\",
-        "outputPath": "D:\\VWITS Trainning Dta\\Project\\Moduls\\AddQsModule\\OnlineExamPortal\\OnlineExamPortal\\obj\\",
+        "outputPath": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

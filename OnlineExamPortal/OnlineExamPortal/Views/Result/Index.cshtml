@@ -1,0 +1,59 @@
+﻿@model IEnumerable<OnlineExamPortal.Models.Result>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExamId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SelectedOption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorrectOption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Result1)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResultId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExamId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuestionId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SelectedOption)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CorrectOption)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Result1)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

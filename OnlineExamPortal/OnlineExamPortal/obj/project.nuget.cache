@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v0jNNCwXv9jVY2/ou4s3sATtlT+YMltEVLIs0aqInMvItukYHUFJAMvyragRgDx4D33P+ysRKkKZKf52xwHNxA==",
+  "dgSpecHash": "lWrGt0sMkT3CpiyfjpAxdQZrGOVLwZ1TntMtkyGeaqhghMToB9p4oR+QoEb/oFru1T/Sc9Kuo9AwGMMsKTt5bA==",
   "success": true,
-  "projectFilePath": "D:\\VWITS Trainning Dta\\Project\\Moduls\\AddQsModule\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj",
+  "projectFilePath": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\OnlineExamPortal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\p1432\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\p1432\\.nuget\\packages\\enums.net\\4.0.1\\enums.net.4.0.1.nupkg.sha512",
