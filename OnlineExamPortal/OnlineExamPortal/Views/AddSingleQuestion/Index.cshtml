@@ -2,228 +2,305 @@
 
 
 @{
-    ViewData["Title"] = "Index";
-    @using OnlineExamPortal.Models 
+    Layout = null;
 }
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewData["Title"]</title>
-
-    <style>
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px; /* Add margin at the top of the table */
-        }
-
-            .table th, .table td {
-                border: 1px solid #ddd;
-                padding: 8px;
-                text-align: left;
-            }
-
-            .table th {
-                background-color: #f2f2f2;
-            }
-
-            .table tbody tr:nth-child(even) {
-                background-color: #f9f9f9;
-            }
-
-            .table a {
-                text-decoration: none;
-                color: #007bff;
-                margin-right: 8px;
-            }
-
-                .table a:hover {
-                    text-decoration: underline;
-                }
-        .dashb h1 {
-            position: relative;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 0px;
-            text-transform: uppercase;
-            width: 150px;
-            text-align: center;
-            margin: auto;
-            margin-bottom: 15px;
-            white-space: nowrap;
-            border: 2px solid #222;
-            padding: 5px 11px 3px 11px;
-        }
-
-            .dashb h1:before, .dashb h1:after {
-                background-color: #c50000;
-                position: absolute;
-                content: '';
-                height: 7px;
-                width: 7px;
-                border-radius: 50%;
-                bottom: 12px;
-            }
-
-            .dashb h1:before {
-                left: -20px;
-            }
-
-            .dashb h1:after {
-                right: -20px;
-            }
-        .add-question {
-            display: inline-block;
-            padding: 4px 8px;
-            margin-right: 10px;
-            text-decoration: none;
-            color: #fff;
-            background-color: #007bff;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-            .add-question:hover {
-                background-color: #0056b3;
-                text-decoration: none;
-                color: #fff;
-            }
-
-        .topic-select {
-            display: inline-block;
-            margin-right: 10px;
-            position: relative;
-        }
-
-            .topic-select select {
-                appearance: none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                background-color: #fff;
-                border: 1px solid #ccc;
-                padding: 8px;
-                padding-right: 25px;
-                border-radius: 4px;
-                cursor: pointer;
-                outline: none;
-            }
-
-            .topic-select::before {
-                content: '\25BC';
-                position: absolute;
-                top: 52%;
-                right: 4px;
-                transform: translateY(-50%);
-                pointer-events: none;
-            }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Brand</title>
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="~/assets/fonts/fontawesome-all.min.css">
 </head>
 
-<body>
-    <div class="dashb">
-    <h1>Dashboard</h1>
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-user-circle"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>ADMINSTRATOR</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link active" href="../AddSingleQuestion/Index"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Users/Index"><i class="fas fa-user"></i><span>Manage users</span></a><a class="nav-link" href="../AddSingleQuestion/Create"><i class="fas fa-plus-circle"></i><span>Add Single Question</span></a><a class="nav-link" href="../DataUpload2/Index"><i class="fas fa-file-import"></i><span>Import From Excel</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../quiz/start"><i class="fas fa-tv" style="font-size: 13px;"></i><span>Exam Page</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Exam/login"><i class="far fa-user-circle"></i><span>Login</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Exam/Registration"><i class="fas fa-user-circle"></i><span>Register</span></a></li>
+                </ul><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>
+                <div class="text-center d-none d-md-inline"></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group"></div>
+                        </form>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow">
+                                <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="me-auto navbar-search w-100">
+                                        <div class="input-group">
+                                            <input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
+                                            </div>
+                                            <div>
+                                                <span class="small text-gray-500">December 12, 2023</span>
+                                                <p>A new monthly report is ready to download!</p>
+                                            </div>
+                                       
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3">
+                                                <img class="rounded-circle" src="~/assets/img/avatars/avatar4.jpeg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Hi there! I am wondering if you can help me with a problem I've been having.</span></div>
+                                                <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3">
+                                                <img class="rounded-circle" src="~/assets/img/avatars/avatar2.jpeg">
+                                                <div class="status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>I have the photos that you ordered last month!</span></div>
+                                                <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3">
+                                                <img class="rounded-circle" src="~/assets/img/avatars/avatar3.jpeg">
+                                                <div class="bg-warning status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Last month's report looks great, I am very happy with the progress so far, keep up the good work!</span></div>
+                                                <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="dropdown-list-image me-3">
+                                                <img class="rounded-circle" src="~/assets/img/avatars/avatar5.jpeg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="fw-bold">
+                                                <div class="text-truncate"><span>Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</span></div>
+                                                <p class="small text-gray-500 mb-0">Chicken the Dog · 2w</p>
+                                            </div>
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                    </div>
+                                </div>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-end" aria-labelledby="alertsDropdown"></div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Kiran Pandit</span><img class="border rounded-circle img-profile" src="~/assets/img/avatars/avatar5.jpeg"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">Dashboard</h3><a class="btn btn-primary btn-sm" href="@Url.Action("DownloadAllQuestions", "AddSingleQuestion")">
+                            <i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Download All Questions
+                        </a>
+                    </div>
+                    <div class="row d-flex">
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Total Attempts</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>@ViewBag.HighestExamId</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-clipboard-list fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-success py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Registred Users</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>@ViewBag.UserCount</span></div>
+
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-users fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-info py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-info fw-bold text-xs mb-1">
+                                                <span>Total Questions</span>
+                                                <div class="text-dark fw-bold h5 mb-0"><span>@ViewBag.TotalQuestionsCount</span></div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-clipboard-list fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form method="get" asp-action="Index">
+                            <div class="col-md-6 col-xl-3 mb-4">
+                                <div class="card shadow border-start-warning py-2">
+                                    <div class="card-body">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col-md-6">
+                                                <div class="dropdown">
+                                                    <div class="col-md-12">
+                                                        @Html.DropDownList("selectedTopic", new SelectList(ViewBag.Topics, "TopicId", "TopicName"), "All Questions", new { @class = "form-control" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <button class="btn btn-primary" type="submit" style="margin-left: 1px;width: 64px;">Filter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Type)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Question1)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Option1)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Option2)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Option3)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Option4)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Option5)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CorrectOption)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DifficultyLevel)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Topic)
+                            </th>
+                                <th>
+                                    <a>More_Options</a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Type)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Question1)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Option1)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Option2)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Option3)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Option4)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Option5)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CorrectOption)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DifficultyLevel)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Topic.TopicId)
+                                </td>
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.QuestionId">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.QuestionId">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.QuestionId">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2023</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
-
-    <form method="get" asp-action="Index">
-        <div class="add-question">
-            <a asp-action="Create" class="add-question">Add Single Question</a>
-        </div>
-        <div class="add-question">
-            <a asp-action="AddBulkQuestions" class="add-question">Import From Excel</a>
-        </div>
-        <div class="topic-select">
-            @Html.DropDownList("selectedTopic", new SelectList(ViewBag.Topics, "TopicId", "TopicName"), "All Questions")
-        </div>
-        <button type="submit" class="add-question">Filter</button>
-        <div class="add-question">
-            <a asp-action="ManageUsers" class="add-question">Manage Users</a>
-        </div>
-        <div class="add-question">
-            <a asp-action="ExamPage" class="add-question">Exam Page</a>
-        </div>
-    </form>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Question1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Option1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Option2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Option3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Option4)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Option5)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CorrectOption)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DifficultyLevel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Topic)
-            </th>
-            <th>
-                <a>More_Options</a>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Type)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Question1)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Option1)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Option2)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Option3)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Option4)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Option5)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CorrectOption)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DifficultyLevel)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Topic.TopicId)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.QuestionId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.QuestionId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.QuestionId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/theme.js"></script>
 </body>
+
 </html>
+
+

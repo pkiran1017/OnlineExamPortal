@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -18,6 +19,7 @@ namespace OnlineExamPortal.Controllers
             _context = context;
         }
         // GET: AddSingleQuestion
+        
         public async Task<IActionResult> Index(int? selectedTopic)
         {
             ViewBag.Topics = await _context.Topics.ToListAsync();
@@ -32,7 +34,36 @@ namespace OnlineExamPortal.Controllers
 
             var questions = await questionsQuery.ToListAsync();
 
+            var highestExamId = await _context.Exams.MaxAsync(e => (int?)e.ExamId) ?? 0;
+
+            ViewBag.HighestExamId = highestExamId;
+            var userCount = await _context.Users.CountAsync(u => u.UserRole == "user");
+
+            ViewBag.UserCount = userCount;
+            var totalQuestionsCount = await _context.Questions
+       .Where(q => selectedTopic.HasValue ? q.TopicId == selectedTopic.Value : true)
+       .CountAsync();
+
+            ViewBag.TotalQuestionsCount = totalQuestionsCount;
+
             return View(questions);
+        }
+        public IActionResult DownloadAllQuestions()
+        {
+            var allQuestions = _context.Questions.Include(q => q.Topic).ToList();
+
+            // Create a CSV string
+            var csvContent = new StringBuilder();
+            csvContent.AppendLine("Type,Question,Option1,Option2,Option3,Option4,Option5,CorrectOption,Topic,DifficultyLevel");
+
+            foreach (var question in allQuestions)
+            {
+                csvContent.AppendLine($"{question.Type},{question.Question1},{question.Option1},{question.Option2},{question.Option3},{question.Option4},{question.Option5},{question.CorrectOption},{question.Topic.TopicName},{question.DifficultyLevel}");
+            }
+
+            // Return the CSV file as a response
+            byte[] data = Encoding.UTF8.GetBytes(csvContent.ToString());
+            return File(data, "text/csv", "AllQuestions.csv");
         }
         // GET: AddSingleQuestion/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -160,6 +191,8 @@ namespace OnlineExamPortal.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+       
         private bool QuestionExists(int id)
         {
           return (_context.Questions?.Any(e => e.QuestionId == id)).GetValueOrDefault();

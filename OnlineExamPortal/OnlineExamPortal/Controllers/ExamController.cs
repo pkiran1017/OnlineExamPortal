@@ -113,6 +113,7 @@ namespace OnlineExamPortal.Controllers
        
         public IActionResult AdminPage()
         {
+
             /*
              Always add this 2 lines in your controller so you can fetch current logged in user's userid.
             This is to simplify implementation of login so all the data must get added to the current logged in user 
@@ -121,8 +122,8 @@ namespace OnlineExamPortal.Controllers
             @ViewBag.UserId!
             above line will fetch the userid for the current logged in user
              */
-            var userid = HttpContext.Session.GetInt32("UserId");
 
+            var userid = HttpContext.Session.GetInt32("UserId");
            
             ViewBag.UserId = userid;
             return View();
@@ -130,7 +131,6 @@ namespace OnlineExamPortal.Controllers
         public IActionResult UserPage()
         {
             var userid = HttpContext.Session.GetInt32("UserId");
-
            
             ViewBag.UserId = userid;
             return View();
@@ -144,7 +144,6 @@ namespace OnlineExamPortal.Controllers
         public IActionResult ForgetPass(string Email)
         {
             Registration r = new Registration();
-
 
             conn1.Open();
 

@@ -21,6 +21,114 @@
       "PackagePath": "staticwebassets\\Uploads\\Questions.xlsx"
     },
     {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\fonts\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\img\\avatars\\avatar1.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar1.jpeg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\img\\avatars\\avatar2.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar2.jpeg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\img\\avatars\\avatar3.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar3.jpeg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\img\\avatars\\avatar4.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar4.jpeg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\img\\avatars\\avatar5.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\avatars\\avatar5.jpeg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\img\\dogs\\image1.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\dogs\\image1.jpeg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\img\\dogs\\image2.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\dogs\\image2.jpeg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\img\\dogs\\image3.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\dogs\\image3.jpeg"
+    },
+    {
+      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\js\\theme.js",
+      "PackagePath": "staticwebassets\\assets\\js\\theme.js"
+    },
+    {
       "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\css\\Login_Registration.css",
       "PackagePath": "staticwebassets\\css\\Login_Registration.css"
     },

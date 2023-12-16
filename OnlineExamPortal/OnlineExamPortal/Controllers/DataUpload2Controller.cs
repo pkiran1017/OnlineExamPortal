@@ -2,26 +2,51 @@
 using Microsoft.Data.SqlClient;
 using System.Data.OleDb;
 using System.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using OnlineExamPortal.Models;
+
 
 namespace OnlineExamPortal.Controllers
 {
     public class DataUpload2Controller : Controller
     {
-       
+        private readonly ONLINEEXAMPORTALContext _dbContext;
+
         private readonly ILogger<DataUpload2Controller> _logger;
         private IWebHostEnvironment Environment;
         private IConfiguration Configuration;
-        public DataUpload2Controller(ILogger<DataUpload2Controller> logger, IWebHostEnvironment _environment, IConfiguration _configuration)
+
+
+        public DataUpload2Controller(ILogger<DataUpload2Controller> logger, IWebHostEnvironment _environment, IConfiguration _configuration, ONLINEEXAMPORTALContext dbContext)
         {
             _logger = logger;
             Environment = _environment;
             Configuration = _configuration;
+            _dbContext = dbContext;
         }
         public IActionResult Index()
         {
+            if (_dbContext != null)
+            {
+                int highestExamId = _dbContext.Exams.Max(e => e.ExamId);
+
+                // Pass the highest ExamID to the view
+                ViewBag.HighestExamId = highestExamId;
+
+                int userCount = _dbContext.Users.Count(u => u.UserRole == "User");
+
+                // Pass the user count to the view
+                ViewBag.UserCount = userCount;
+
+                int totalQuestionsCount = _dbContext.Questions.Count();
+
+                // Pass the total question count to the view
+                ViewBag.TotalQuestionsCount = totalQuestionsCount;
+            }
             return View();
         }
-
+        
         [HttpPost]
         public IActionResult Index(IFormFile postedFile)
         {
