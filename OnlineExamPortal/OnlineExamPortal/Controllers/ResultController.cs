@@ -18,26 +18,32 @@ namespace OnlineExamPortal.Controllers
         [HttpGet]
         public IActionResult PieChart(int UserId, int TopicId)
         {
+            ViewBag.UserID = UserId;
+            ViewBag.TopicId = TopicId;
             DataFetcher d = new DataFetcher();
-            List<Result> rl = d.UidTidList(UserId, TopicId);
-            int cas = rl.Count(r => r.Result1 == 1);
-            int ias = rl.Count(r => r.Result1 == 0);
-            var cl = new List<string>() { "Correct Answers", "IncorrectAnswers" };
-            var cd = new List<int>() { cas, ias };
-            var cc = new List<string> { "green", "red" };
+            List<Result> rl = d.SinglePieList(UserId, TopicId);
+            if (rl != null)
+            {
+                int cas = rl.Count(r => r.Result1 == 1);
+                int ias = rl.Count(r => r.Result1 == 0);
+                var cl = new List<string>() { "Correct Answers", "IncorrectAnswers" };
+                var cd = new List<int>() { cas, ias };
+                var cc = new List<string> { "green", "red" };
 
-            ViewBag.ChartLabels = Newtonsoft.Json.JsonConvert.SerializeObject(cl);
-            ViewBag.ChartDatas = Newtonsoft.Json.JsonConvert.SerializeObject(cd);
-            ViewBag.ChartColors = Newtonsoft.Json.JsonConvert.SerializeObject(cc);
+                ViewBag.ChartLabels = Newtonsoft.Json.JsonConvert.SerializeObject(cl);
+                ViewBag.ChartDatas = Newtonsoft.Json.JsonConvert.SerializeObject(cd);
+                ViewBag.ChartColors = Newtonsoft.Json.JsonConvert.SerializeObject(cc);
 
+                return View();
+            }
             return View();
         }
 
         [HttpGet]
-        public IActionResult ShowQuestions(int UserId, int TopicId)
+        public IActionResult ShowQuestions(int UserId, int TopicId, string Type)
         {
             DataFetcher d = new DataFetcher();
-            var questions = d.GetQuestionsByUserAndTopic(UserId,TopicId);
+            var questions = d.GetQuestionsByUserAndTopic(UserId, TopicId, Type);
             return Json(questions);
         }
 
@@ -45,9 +51,10 @@ namespace OnlineExamPortal.Controllers
         public IActionResult ByTopics(int UserId)
         {
             DataFetcher d = new DataFetcher();
+            UserId = (int)HttpContext.Session.GetInt32("UserId");
             var topics = d.GetTopicsForUser(UserId);
             var chartDataByTopic = new Dictionary<int, Graphical>();
-
+            var type = "all";
             ViewBag.UserId = UserId;
             foreach (var topic in topics)
             {

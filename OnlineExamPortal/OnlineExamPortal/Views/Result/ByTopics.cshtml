@@ -85,30 +85,40 @@
                                                     return question[selectedOptionKey];
                                                 }
 
-                                                var selectedOptionValue = getOptionValue(question.selectedOption);
-                                                var correctOption = (question.correctOption).toLowerCase()
-                                                var correctOptionValue = ""
-                                                if (correctOption == "a") {
-                                                    correctOptionValue = "Option1";
-                                                } else if (correctOption == "b") {
-                                                    correctOptionValue = "Option2";
-                                                } else if (correctOption == "c") {
-                                                    correctOptionValue = "Option3";
-                                                } else if (correctOption == "d") {
-                                                    correctOptionValue = "Option4";
-                                                } else {
-                                                    correctOptionValue = null;
+                                                function changeOptionsignature(x) {
+                                                    if (x === "a") {
+                                                        return "Option1";
+                                                    } else if (x === "b") {
+                                                        return "Option2";
+                                                    } else if (x === "c") {
+                                                        return "Option3";
+                                                    } else if (x === "d") {
+                                                        return "Option4";
+                                                    } else if (x === "e") {
+                                                        return "Option5";
+                                                    } else {
+                                                        return x;
+                                                    }
+
                                                 }
+                                                var selectedOption = question.selectedOption.toLowerCase();
+                                                var correctOption = question.correctOption.toLowerCase();
+
+                                                var correctOptionValue = changeOptionsignature(correctOption);
+                                                var selectedOptionValue = changeOptionsignature(selectedOption);
+
                                                 correctOptionValue = getOptionValue(correctOptionValue);
+                                                selectedOptionValue = getOptionValue(selectedOptionValue);
+
                                                 var questionHtml = `
-                                                                                                                    <div class="card mb-3 ${bgColor}">
-                                                                                                                        <div class="card-body">
-                                                                                                                            <h5 class="card-title">${question.questionText}</h5>
-                                                                                                                            <p class="card-text">Correct Option: ${correctOptionValue}</p>
-                                                                                                                            <p class="card-text">Selected Option: ${selectedOptionValue}</p>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                `;
+                                        <div class="card mb-3 ${bgColor}">
+                                        <div class="card-body">
+                                        <h5 class="card-title">${question.questionText}</h5>
+                                        <p class="card-text">Correct Option: ${correctOptionValue}</p>
+                                        <p class="card-text">Selected Option: ${selectedOptionValue}</p>
+                                        </div>
+                                        </div>
+                                                                                                                                                        `;
 
                                                 $('#questions-placeholder').append(questionHtml);
                                                 modalBody.append(questionHtml);
@@ -124,7 +134,7 @@
                                                 $.ajax({
                                                     type: 'GET',
                                                     url: '/Result/ShowQuestions',
-                                                    data: { UserId: @ViewBag.UserID, TopicID: tid },
+                                                    data: { UserId: @ViewBag.UserID, TopicID: tid, Type: "all" },
                                                     success: function (questions) {
                                                         updateQuestionsUI(questions);
                                                         $('#questionsModal').modal('show');

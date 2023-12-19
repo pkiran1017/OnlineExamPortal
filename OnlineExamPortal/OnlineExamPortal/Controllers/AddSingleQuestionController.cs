@@ -48,7 +48,12 @@ namespace OnlineExamPortal.Controllers
 
             return View(questions);
         }
-        public IActionResult DownloadAllQuestions()
+        public IActionResult Logout()
+        {
+
+            return RedirectToAction("Login", "Exam");
+        }
+            public IActionResult DownloadAllQuestions()
         {
             var allQuestions = _context.Questions.Include(q => q.Topic).ToList();
 

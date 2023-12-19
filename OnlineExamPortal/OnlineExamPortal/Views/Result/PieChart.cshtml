@@ -49,7 +49,7 @@
             $('#Total_Analysis_btn').click(function () {
                 document.location = '@Url.Action("ByTopics", "Result", new
             {
-                UserID = 1
+                UserID = ViewData["UserId"]
             })';
             });
 
@@ -106,44 +106,54 @@
                     var selectedOptionKey = "option" + selectedOptionNumber;
                     return question[selectedOptionKey];
                 }
+                function changeOptionsignature(x) {
+                    if (x === "a") {
+                        return "Option1";
+                    } else if (x === "b") {
+                        return "Option2";
+                    } else if (x === "c") {
+                        return "Option3";
+                    } else if (x === "d") {
+                        return "Option4";
+                    } else if (x === "e") {
+                        return "Option5";
+                    } else {
+                        return x;
+                    }
 
-                var selectedOptionValue = getOptionValue(question.selectedOption);
-                var correctOption = question.correctOption.toLowerCase();
-                var correctOptionValue = "";
-
-                if (correctOption === "a") {
-                    correctOptionValue = "Option1";
-                } else if (correctOption === "b") {
-                    correctOptionValue = "Option2";
-                } else if (correctOption === "c") {
-                    correctOptionValue = "Option3";
-                } else if (correctOption === "d") {
-                    correctOptionValue = "Option4";
-                } else if (correctOption === "e") {
-                    correctOptionValue = "Option5";
-                } else {
-                    correctOptionValue = null;
                 }
+                var selectedOption = question.selectedOption.toLowerCase();
+                var correctOption = question.correctOption.toLowerCase();
 
+                var correctOptionValue = changeOptionsignature(correctOption);
+                var selectedOptionValue = changeOptionsignature(selectedOption);
                 correctOptionValue = getOptionValue(correctOptionValue);
+                selectedOptionValue = getOptionValue(selectedOptionValue);
+
                 var questionHtml = `
-                                            <div class="card mb-3 ${bgColor}">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">${question.questionText}</h5>
-                                                    <p class="card-text">Correct Option: ${correctOptionValue}</p>
-                                                    <p class="card-text">Selected Option: ${selectedOptionValue}</p>
-                                                </div>
-                                            </div>
-                                        `;
+        <div class="card mb-3 ${bgColor}">
+        <div class="card-body">
+        <h5 class="card-title">${question.questionText}</h5>
+        <p class="card-text">Correct Option: ${correctOptionValue}</p>
+        <p class="card-text">Selected Option: ${selectedOptionValue}</p>
+        </div>
+        </div>
+                                                        `;
 
                 modalBody.insertAdjacentHTML('beforeend', questionHtml);
             });
         }
         function handlePieChartClick(label) {
+            const data = {
+                UserId: "@ViewBag.UserID",
+                TopicId: "@ViewBag.TopicId",
+                Type: "one"
+            }
+            console.log(data);
             $.ajax({
                 type: 'GET',
                 url: '/Result/ShowQuestions',
-                data: { UserId: 1, TopicId: 5 },
+                data: data,
                 success: function (questions) {
                     updateQuestionsUI(questions);
                     $('#questionsModal').modal('show');
