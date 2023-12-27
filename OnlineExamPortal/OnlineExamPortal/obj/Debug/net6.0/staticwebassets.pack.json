@@ -9,18 +9,6 @@
       "PackagePath": "staticwebassets\\ReceivedReports\\PROJECT_DATA_FINAL.xlsx"
     },
     {
-      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\Uploads\\DummyData.xlsx",
-      "PackagePath": "staticwebassets\\Uploads\\DummyData.xlsx"
-    },
-    {
-      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\Uploads\\PROJECT_DATA_FINAL.xlsx",
-      "PackagePath": "staticwebassets\\Uploads\\PROJECT_DATA_FINAL.xlsx"
-    },
-    {
-      "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\Uploads\\Questions.xlsx",
-      "PackagePath": "staticwebassets\\Uploads\\Questions.xlsx"
-    },
-    {
       "Id": "D:\\VWITS Trainning Dta\\Project\\Moduls\\OnlineExamPortal\\OnlineExamPortal\\wwwroot\\assets\\bootstrap\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\assets\\bootstrap\\css\\bootstrap.min.css"
     },

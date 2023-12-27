@@ -46,7 +46,13 @@ namespace OnlineExamPortal.Controllers
             }
             return View();
         }
-        
+
+        public IActionResult Logout()
+        {
+
+            return RedirectToAction("Login", "Exam");
+        }
+
         [HttpPost]
         public IActionResult Index(IFormFile postedFile)
         {

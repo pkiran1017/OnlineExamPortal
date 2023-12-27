@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
+
 
 namespace OnlineExamPortal.Models
 {
@@ -9,6 +11,7 @@ namespace OnlineExamPortal.Models
         {
             Exams = new HashSet<Exam>();
         }
+       
 
         public int UserId { get; set; }
         public string? UserName { get; set; }

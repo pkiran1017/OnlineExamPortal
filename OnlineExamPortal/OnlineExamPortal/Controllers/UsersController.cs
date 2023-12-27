@@ -25,6 +25,11 @@ namespace OnlineExamPortal.Controllers
                           View(await _context.Users.ToListAsync()) :
                           Problem("Entity set 'ONLINEEXAMPORTALContext.Users'  is null.");
         }
+        public IActionResult Logout()
+        {
+
+            return RedirectToAction("Login", "Exam");
+        }
 
         // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)

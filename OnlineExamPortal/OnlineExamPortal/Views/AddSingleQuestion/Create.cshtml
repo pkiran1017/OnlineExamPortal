@@ -120,8 +120,9 @@
                                 <div class="nav-item dropdown no-arrow">
                                     <a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Admin</span><img class="border rounded-circle img-profile" src="~/assets/img/avatars/avatar5.jpeg"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
-                                        <a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                        <a class="dropdown-item" href="@Url.Action("Logout", "AddSingleQuestion")">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout
+                                        </a>
                                     </div>
                                 </div>
                             </li>
@@ -136,64 +137,86 @@
                         <div class="col-md-4">
                             <form asp-action="Create">
                                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                <div class="form-group">
-                                    <label asp-for="Type" class="control-label"></label>
-                                    <select asp-for="Type" class="form-control">
-                                        <option value="Multiple">Multiple</option>
-                                        <option value="True or False">True or False</option>
-                                    </select>
-                                    <span asp-validation-for="Type" class="text-danger"></span>
+                                <div class="form-group row">
+                                    <label asp-for="Type" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <select asp-for="Type" class="form-control">
+                                            <option value="Multiple">Multiple</option>
+                                            <option value="True or False">True or False</option>
+                                        </select>
+                                        <span asp-validation-for="Type" class="text-danger"></span>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Question1" class="control-label"></label>
-                                    <input asp-for="Question1" class="form-control" />
-                                    <span asp-validation-for="Question1" class="text-danger"></span>
+                                <div class="form-group row">
+                                    <label asp-for="Question1" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <input asp-for="Question1" class="form-control" />
+                                        <span asp-validation-for="Question1" class="text-danger"></span>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Option1" class="control-label"></label>
-                                    <input asp-for="Option1" class="form-control" />
-                                    <span asp-validation-for="Option1" class="text-danger"></span>
+                                <div class="form-group row">
+                                    <label asp-for="Option1" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <input asp-for="Option1" class="form-control" />
+                                        <span asp-validation-for="Option1" class="text-danger"></span>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Option2" class="control-label"></label>
-                                    <input asp-for="Option2" class="form-control" />
-                                    <span asp-validation-for="Option2" class="text-danger"></span>
+                                <div class="form-group row">
+                                    <label asp-for="Option2" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <input asp-for="Option2" class="form-control" />
+                                        <span asp-validation-for="Option2" class="text-danger"></span>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Option3" class="control-label"></label>
-                                    <input asp-for="Option3" class="form-control" />
-                                    <span asp-validation-for="Option3" class="text-danger"></span>
+                                <div class="form-group row">
+                                    <label asp-for="Option3" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <input asp-for="Option3" class="form-control" />
+                                        <span asp-validation-for="Option3" class="text-danger"></span>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Option4" class="control-label"></label>
-                                    <input asp-for="Option4" class="form-control" />
-                                    <span asp-validation-for="Option4" class="text-danger"></span>
+                                <div class="form-group row">
+                                    <label asp-for="Option4" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <input asp-for="Option4" class="form-control" />
+                                        <span asp-validation-for="Option4" class="text-danger"></span>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Option5" class="control-label"></label>
-                                    <input asp-for="Option5" class="form-control" />
-                                    <span asp-validation-for="Option5" class="text-danger"></span>
+                                <div class="form-group row">
+                                    <label asp-for="Option5" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <input asp-for="Option5" class="form-control" />
+                                        <span asp-validation-for="Option5" class="text-danger"></span>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="CorrectOption" class="control-label"></label>
-                                    <input asp-for="CorrectOption" class="form-control" />
-                                    <span asp-validation-for="CorrectOption" class="text-danger"></span>
+                                <div class="form-group row">
+                                    <label asp-for="CorrectOption" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <input asp-for="CorrectOption" class="form-control" />
+                                        <span asp-validation-for="CorrectOption" class="text-danger"></span>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="TopicId" class="control-label"></label>
-                                    <select asp-for="TopicId" class="form-control" asp-items="ViewBag.TopicId"></select>
+                                <div class="form-group row">
+                                    <label asp-for="TopicId" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <select asp-for="TopicId" class="form-control" asp-items="ViewBag.TopicId"></select>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="DifficultyLevel" class="control-label"></label>
-                                    <select asp-for="DifficultyLevel" class="form-control">
-                                        <option value="Easy">Easy</option>
-                                        <option value="Medium">Medium</option>
-                                        <option value="Hard">Hard</option>
-                                    </select>
-                                    <span asp-validation-for="DifficultyLevel" class="text-danger"></span>
+                                <div class="form-group row">
+                                    <label asp-for="DifficultyLevel" class="col-sm-4 col-form-label text-right"></label>
+                                    <div class="col-sm-8">
+                                        <select asp-for="DifficultyLevel" class="form-control">
+                                            <option value="Easy">Easy</option>
+                                            <option value="Medium">Medium</option>
+                                            <option value="Hard">Hard</option>
+                                        </select>
+                                        <span asp-validation-for="DifficultyLevel" class="text-danger"></span>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Add" class="btn btn-primary" />
+                                <div class="form-group row">
+                                    <div class="col-sm-8 offset-sm-4">
+                                        <input type="submit" value="Add" class="btn btn-primary" />
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -201,11 +224,11 @@
                 </div>
             </div>
             <div>
-                <a asp-action="Index">Back to Dashboard</a>
-            </div>
+                <a asp-action="Index" class="btn btn-primary">Back to Dashboard</a>
+                           </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2023</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright © QuickQuiz 2024</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
