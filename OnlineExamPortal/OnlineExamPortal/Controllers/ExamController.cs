@@ -40,7 +40,7 @@ namespace OnlineExamPortal.Controllers
                 command.ExecuteNonQuery();
             conn1.Close();
 
-            return Content("Added Successfully");
+            return RedirectToAction("Login", "Exam");
         }
         public IActionResult Login()
         {
